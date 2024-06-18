@@ -14,5 +14,11 @@ cd "$TEMP_DIR"
 # Install any additional dependencies if needed
 pip install -r requirements.txt
 
+# Start the Flask server in the background
+python3 /app/app/web_app.py &
+
+# Wait for a few seconds to ensure the Flask server is up
+sleep 5
+
 # Start the bot
 python3 -m bot
