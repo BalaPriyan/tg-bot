@@ -12,10 +12,10 @@ git clone "$REPO_URL" "$TEMP_DIR"
 cd "$TEMP_DIR"
 
 # Install any additional dependencies if needed
-pip install -r requirements.txt
+pip3 install --no-cache-dir -r requirements.txt --break-system-packages
 
 # Start the Flask server in the background
-python3 /app/app/web_app.py &
+python3 /usr/src/app/app/web_app.py &
 
 # Wait for a few seconds to ensure the Flask server is up
 sleep 5
